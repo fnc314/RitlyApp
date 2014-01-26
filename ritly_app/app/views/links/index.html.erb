@@ -1,0 +1,23 @@
+<h1></h1>
+
+<table>
+
+	<tr><th>The List of generated Links!</th></tr>
+
+	<tr>
+		<th>No.</th>
+		<th>Website URL</th>
+		<th>Random String</th>
+		<th>DELETE</th>
+	</tr>
+
+	<%= @links.each do |x| %>
+		<tr>
+			<td><%= x[:id] %></td>
+			<td><%= x[:url] %></td>
+			<td><%= x[:random_string] %></td>
+			<td><button method="/links/#{x[:random_string]}" action="get">DELETE</td>
+		</tr>
+	<% end %>
+
+</table>

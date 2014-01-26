@@ -1,0 +1,10 @@
+<h1> Submit a new link </h1>
+
+<%= form_for @link do |f| %>
+
+	<%= f.text_field :url, placeholder: "Ex: www.google.com" %> <br>
+<!-- <input type="text" name="link[url]" placeholder="Ex: http://www.google.com/"> -->
+	
+
+	<%= f.submit "Submit Link" %>
+<% end %>

@@ -10,7 +10,6 @@ RitlyApp::Application.routes.draw do
   get "/go/:random_string/preview", to: "go#preview"
 
   #Links Controller
-
   get "/links", to: "links#index"
 
   get "/links/new", to: "links#new"
@@ -18,5 +17,7 @@ RitlyApp::Application.routes.draw do
   get "/links/:random_string", to: "links#show"
 
   post "/links", to: "links#create"
+
+  delete "/links/:random_string", to: "links#delete"
 
 end
