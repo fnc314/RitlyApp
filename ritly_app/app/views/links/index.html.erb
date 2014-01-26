@@ -1,26 +1,32 @@
-<table>
+<div class="table-responsive">
 
-	<tr><th>The List of generated Links!</th></tr>
+	<table class="table table-hover">
 
-	<tr>
-		<th>No.</th>
-		<th>Website URL</th>
-		<th>Random String</th>
-		<th>DELETE</th>
-	</tr>
+		<tr><th>The List of Generated Links!</th></tr>
 
-	<%= @links.each do |x| %>
 		<tr>
-			<td><%= x[:id] %></td>
-			<td><%= x[:url] %></td>
-			<td><%= x[:random_string] %></td>
-			<td><%= link_to "DELETE", "/links/#{x[:random_string]}", :method => :delete %></td>
+			<th>No.</th>
+			<th>Website URL</th>
+			<th>Random String</th>
+			<th>DELETE</th>
 		</tr>
-	<% end %>
 
-	<tr>
-		<td><a href="/go">GO</a></td>
-		<td><a href="/links/new">Make A New Entry!</a></td>
-	</tr>
+		<%= @links.each do |x| %>
+			<tr>
+				<td><%= x[:id] %></td>
+				<td><%= x[:url] %></td>
+				<td><%= x[:random_string] %></td>
+				<td><%= link_to "DELETE", "/links/#{x[:random_string]}", :method => :delete %></td>
+			</tr>
+		<% end %>
 
-</table>
+		<tr>
+			<td><a href="/go">GO</a></td>
+			<td></td>
+			<td></td>
+			<td><%= link_to "Make A New Entry!", "/links/new", :method => :get %></td>
+		</tr>
+
+	</table>
+
+</div>
