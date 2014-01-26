@@ -10,6 +10,7 @@ class LinksController < ApplicationController
 
 	def create
 		ran_str = SecureRandom.urlsafe_base64(15)
+
 		link = Link.create(:url => params["link"]["url"], :random_string => ran_str)
 		redirect_to "/links/#{link.random_string}"
 	end

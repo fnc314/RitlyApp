@@ -1,10 +1,9 @@
-<h1> CONGRATS. . . </h1>
+<h1 class="title"> CONGRATS. . . </h1>
 
 <p>Your code <%= @link.random_string %> goes to <%= @link.url %></p>
 
-<p> Try It Out ===>  <a href="/go/<%= @link.random_string %>"> <%= @link.random_string %> </a></p>
-
-<p><a href="/go/<%= @link.random_string %>/preview">Preview</a></p>
-
-<a href="/links"> See all you've created </a><br>
-<a href="/links/new"> Make another code </a>
+<%= link_to "Try It Out", "/go/#{@link.random_string}", :method => :get %>
+<br>
+<%= link_to "Preview", "/go/#{@link.random_string}/preview", :method => :get %>
+<br>
+<%= link_to "NEW", "/links/new", :method => :get %>
