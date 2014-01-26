@@ -19,4 +19,8 @@ class Link < ActiveRecord::Base
 
 	end
 
+	def self.search(random_string)
+		@link = find_by(:random_string => ['random_string LIKE ?', "#{random_string}"])
+	end
+
 end

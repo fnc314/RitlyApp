@@ -1,5 +1,11 @@
 <h1>RITLY APP!</h1>
 
 <!--EntryBar-->
+<h3>Already have a code?<br>Try it out!!!!</h3>
+<%= form_tag "/go/:random_string/preview", method: "get" do %><br>
+<%= text_field_tag :random_string %>
+<%= submit_tag "Enter Code"%>
+<% end %>
+
 <a href="/links/new"> Get Started! </a> <br>
-<a href="/links">History</a>
+<a href="/links"> See the current database </a>
