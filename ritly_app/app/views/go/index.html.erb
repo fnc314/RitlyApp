@@ -1,9 +1,9 @@
-<h1>RITLY APP!</h1>
+<h1 class="EntryPage">RITLY APP!</h1>
 
 <!--EntryBar-->
 <h3>Already have a code?<br>Try it out!!!!</h3>
 <%= form_for "/go/:random_string/preview", method: "get" do %><br>
-<%= text_field_tag :random_string %>
+<%= text_field_tag "Enter Code", nil %>
 <%= submit_tag "Preview"%>
 <% end %>
 

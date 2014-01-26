@@ -1,28 +1,28 @@
 <div class="table-responsive">
 
-	<table class="table table-hover">
+<h1 class="TableName">The List of Generated Codes</h1>
 
-		<tr><th>The List of Generated Links!</th></tr>
+	<table class="table table-hover">
 
 		<tr>
 			<th>No.</th>
 			<th>Website URL</th>
 			<th>Random String</th>
-			<th>DELETE</th>
+			<th>Delete</th>
 		</tr>
 
 		<%= @links.each do |x| %>
 			<tr>
 				<td><%= x[:id] %></td>
 				<td><%= x[:url] %></td>
-				<td><%= x[:random_string] %></td>
+				<td><%= link_to "#{x[:random_string]}", "/go/#{x[:random_string]}/preview", :method => :get %></td>
 				<td><%= link_to "DELETE", "/links/#{x[:random_string]}", :method => :delete %></td>
 			</tr>
 		<% end %>
 
 		<tr>
-			<td><a href="/go">GO</a></td>
 			<td></td>
+			<td><%= link_to "Ritly App", "/go", :method => :get %></td>
 			<td></td>
 			<td><%= link_to "Make A New Entry!", "/links/new", :method => :get %></td>
 		</tr>
