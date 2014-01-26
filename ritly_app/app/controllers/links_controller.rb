@@ -19,20 +19,14 @@ class LinksController < ApplicationController
 	end
 
 	def delete
-		link = Link.find_by(:random_string => params[:random_string])
-		link.destroy
+		@link = Link.find_by(:random_string => params[:random_string])
+		@link.destroy
 		redirect_to "/links"
 	end
 
-	private #model methods (maybe?)
+	#private #model methods (maybe?)
 
-	def unique_code_checker(random_string)
-
-	end
-
-	def unique_url(url)
-
-	end
+	
 
 	#def add_http #add http:// to url submitted
 

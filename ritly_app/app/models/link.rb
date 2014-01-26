@@ -13,9 +13,6 @@ class Link < ActiveRecord::Base
 		return false
 	end
 
-
-	end
-
 	def unique_url(url)
 
 	end
