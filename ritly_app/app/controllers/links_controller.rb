@@ -14,8 +14,12 @@ class LinksController < ApplicationController
 			link = Link.create(:url => params["link"]["url"], :random_string => ran_str)
 			redirect_to "/links/#{link.random_string}"
 		else
-			link = Link.create(:url => params["link"]["url"], :random_string => params["link"]["random_string"])
-			redirect_to "/links/#{link.random_string}"
+			if Link.code_is_unique?(params["link"]["random_string"])
+				link = Link.create(:url => params["link"]["url"], :random_string => params["link"]["random_string"])
+				redirect_to "/links/#{link.random_string}"
+			else
+				redirect_to "/links/new"
+			end
 		end
 	end
 

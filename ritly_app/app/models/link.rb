@@ -1,6 +1,6 @@
 class Link < ActiveRecord::Base
 
-	def code_is_unique(rand_str)
+	def self.code_is_unique?(rand_str)
 		Link.find_by(:random_string => rand_str).nil?
 	end
 

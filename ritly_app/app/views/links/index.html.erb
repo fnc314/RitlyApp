@@ -8,7 +8,7 @@
 		<th>Random String</th>
 		<th>Delete</th>
 
-		<%= @links.each do |x| %>
+		<% @links.each do |x| %>
 			<tr>
 				<td><%= x[:url] %></td>
 				<td><%= link_to "#{x[:random_string]}", "/go/#{x[:random_string]}/preview", :method => :get %></td>

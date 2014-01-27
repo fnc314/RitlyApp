@@ -16,6 +16,8 @@ RitlyApp::Application.routes.draw do
 
   get "/links/:random_string", to: "links#show"
 
+  get "/links/sorry", to: "links#sorry"
+
   post "/links", to: "links#create"
 
   delete "/links/:random_string", to: "links#delete"
