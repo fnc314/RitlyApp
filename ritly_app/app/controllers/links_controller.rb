@@ -18,7 +18,7 @@ class LinksController < ApplicationController
 				link = Link.create(:url => params["link"]["url"], :random_string => params["link"]["random_string"])
 				redirect_to "/links/#{link.random_string}"
 			else
-				redirect_to "/links/new"
+				redirect_to "/links/sorry"
 			end
 		end
 	end
@@ -32,11 +32,5 @@ class LinksController < ApplicationController
 		@link.destroy
 		redirect_to "/links"
 	end
-
-	#private #model methods (maybe?)
-
-	
-
-	#def add_http #add http:// to url submitted
 
 end

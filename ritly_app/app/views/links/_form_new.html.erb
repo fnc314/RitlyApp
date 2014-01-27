@@ -1,0 +1,9 @@
+<%= form_for @link, action: "/links", class: "form-control" do |f| %>
+
+	<%= f.text_field :url, placeholder: "Ex: www.google.com" %> <br>
+	<%= f.text_field :random_string, placeholder: "Enter your own string!" %> <br>
+<!-- <input type="text" name="link[url]" placeholder="Ex: http://www.google.com/"> -->
+	
+
+	<%= f.submit "Generate Code", class: "btn btn-default" %>
+<% end %>

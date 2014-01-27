@@ -1,7 +1,7 @@
 class GoController < ApplicationController
 
 	def index
-		@go = Link.search(params[:random_string])
+		@link = Link.new
 	end
 
 	def redirect
