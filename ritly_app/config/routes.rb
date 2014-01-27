@@ -14,10 +14,10 @@ RitlyApp::Application.routes.draw do
 
   get "/links/new", to: "links#new"
 
-  get "/links/:random_string", to: "links#show"
+  get "/links/:id", to: "links#show"
 
   post "/links", to: "links#create"
 
-  delete "/links/:random_string", to: "links#delete"
+  delete "/links/:id", to: "links#delete"
 
 end

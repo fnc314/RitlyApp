@@ -1,6 +1,7 @@
-<h1 class="title"> CONGRATS. . . </h1>
+<h1 class="title show"> CONGRATS!!! </h1><br>
+<h3 class="info"> You made a new code! </h3> <br><br>
 
-<p>Your code <%= @link.random_string %> goes to <%= @link.url %></p>
+<p class="info">Your code <%= @link.random_string %> goes to <%= @link.url %></p>
 
 <%= link_to "Try It Out", "/go/#{@link.random_string}", :method => :get %>
 <br>

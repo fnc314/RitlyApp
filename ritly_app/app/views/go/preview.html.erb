@@ -1,10 +1,7 @@
-<h1 class="title"> make this nice </h1>
+<h1 class="title"> A Little About <%= @link.random_string %> </h1>
 
-<p>Your code <%= @link.random_string %> goes to <%= @link.url %></p>
-
-<img src=<%= @link.url %>></img> <br>
+<p class="info">Your code <%= @link.random_string %> goes to <%= @link.url %></p>
 
 
-
-<a href="/links"> See All Codes </a> <br>
-<a href="/links/new"> Generate A New Code </a>
+<%= link_to "SEE ALL CODES", "/links" %> <br><br>
+<%= link_to "GENERATE A NEW CODE", "/links/new" %>
