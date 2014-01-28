@@ -23,10 +23,10 @@ RitlyApp::Application.routes.draw do
   delete "/links/:id", to: "links#delete"
 
   #Sessions Controller
-  get '/signup' => 'users#new'
+  get '/signup', to: 'users#new'
   
   delete '/signout', to: 'sessions#destroy'
   
-  get'/signin' => 'sessions#new'
+  get'/signin', to: 'sessions#new'
 
 end

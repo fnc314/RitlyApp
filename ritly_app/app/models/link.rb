@@ -11,6 +11,8 @@
 
 class Link < ActiveRecord::Base
 
+	attr_accessible :url, :random_string
+
 	def self.code_is_unique?(rand_str)
 		Link.find_by(:random_string => rand_str).nil?
 	end
