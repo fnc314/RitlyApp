@@ -1,6 +1,6 @@
 RitlyApp::Application.routes.draw do
 
-  resources :users
+  resources :users, :sessions
 
   #Go Controller
   root to: "go#index"

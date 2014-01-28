@@ -2,5 +2,5 @@
 <li><%= link_to "All", "/links" %></li>
 <li><%= link_to "Create", "/links/new" %></li>
 <li><%= link_to "Sign In", "/signin" %></li>
-<li><%= link_to "Sign Out", "/signout" %></li>
+<li><%= link_to "Sign Out", :method => "delete", "/signout" %></li>
 <li><%= link_to "Sign Up", "/signup" %></li>
