@@ -1,0 +1,12 @@
+<h1>Sign In</h1>
+
+<%= form_for(:session, url: "/signin") do |f| %>
+
+<%= f.text_field :email, placeholder: "Email" %><br>
+<%= f.text_field :password, placeholder: "Password" %><br>
+
+<%= f.submit "Sign In", class: "btn btn-large btn-primary" %>
+
+<% end %>
+
+<h4>New User?<br><%= link_to "Sign Up Now!", "/signup" %></h4>
