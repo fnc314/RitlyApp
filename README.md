@@ -1,4 +1,4 @@
-Week3_MiniProject
+RitlyApp
 =================
 
 MiniProject from Week 3 at GA_WDI
