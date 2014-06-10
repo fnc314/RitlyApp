@@ -10,8 +10,8 @@
 
 		<% @links.each do |x| %>
 			<tr>
-				<td><%= x[:url] %></td>
-				<td><%= link_to "#{x[:random_string]}", "/go/#{x[:random_string]}/preview", :method => :get %></td>
+				<td class="displaylinks"><%= x[:url] %></td>
+				<td class="displaylinks"><%= link_to "#{x[:random_string]}", "/go/#{x[:random_string]}/preview", :method => :get %></td>
 				<td><%= link_to "DELETE", "/links/#{x[:id]}", :method => :delete %></td>
 			</tr>
 		<% end %>
